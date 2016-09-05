@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon version="0.2">
+    <title xml:lang="ko">로그인 리다이렉트 애드온</title>
+    <title xml:lang="en">Login Redirect</title>
+    <description xml:lang="ko">로그인하지 않은 사용자를 특정 URL로 리다이렉트시키는 애드온입니다.</description>
+    <description xml:lang="en">Redirect users who are not logged in to a specific URL.</description>
+    <version>1.0</version>
+    <date>2016-09-05</date>
+    <author email_address="kijin@kijinsung.com" link="https://github.com/kijin">
+        <name xml:lang="ko">Kijin Sung</name>
+        <name xml:lang="en">Kijin Sung</name>
+    </author>
+    <extra_vars>
+		<var name="redirect_url">
+			<title xml:lang="ko">리다이렉트 URL</title>
+			<title xml:lang="en">Redirect URL</title>
+			<description xml:lang="ko">주소 또는 mid를 입력하세요.</description>
+			<description xml:lang="en">Please enter an address or a mid.</description>
+		</var>
+	</extra_vars>
+</addon>
