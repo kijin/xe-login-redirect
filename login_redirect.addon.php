@@ -30,7 +30,7 @@ if ($called_position === 'before_module_init' && $addon_info->redirect_url)
 		{
 			return;
 		}
-		if ($_SERVER['REQUEST_URI'] === $addon_info->redirect_url['path'])
+		if ($_SERVER['REQUEST_URI'] === $redirect_url_info['path'])
 		{
 			return;
 		}
