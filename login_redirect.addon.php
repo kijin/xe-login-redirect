@@ -20,15 +20,17 @@ if ($called_position === 'before_module_init' && $addon_info->redirect_url)
 		{
 			return;
 		}
-		if ($_SERVER['REQUEST_URI'] === $addon_info->redirect_url)
-		{
-			return;
-		}
 		if (preg_match('/^[a-z0-9_]+$/i', $addon_info->redirect_url) && Context::get('mid') === $addon_info->redirect_url)
 		{
 			return;
 		}
-		if (getNotEncodedFullUrl() === $addon_info->redirect_url)
+		
+		$redirect_url_info = parse_url($addon_info->redirect_url);
+		if ($_SERVER['HTTP_HOST'] === $redirect_url_info['host'] && $_SERVER['REQUEST_URI'] === $redirect_url_info['path'])
+		{
+			return;
+		}
+		if ($_SERVER['REQUEST_URI'] === $addon_info->redirect_url['path'])
 		{
 			return;
 		}
